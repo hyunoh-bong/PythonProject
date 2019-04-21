@@ -159,6 +159,19 @@ def pcs_m():
 def pcs_p():
     print("Process P")
     for i in db_data:
+        aver=(i[6]+i[7])/2
+        i.insert(8,aver)
+        if (i[8]>=90):
+            i.insert(9,"A")
+        elif (i[8]>=70):
+            i.insert(9,"B")
+        elif (i[8]>=50):
+            i.insert(9,"C")
+        elif (i[8]>=30):
+            i.insert(9,"D")
+        else:
+            i.insert(9,"F")
+    for i in db_data:
         print(i)
 # read (by bong) 파일내용이 [순번, id, 이름, 생년월일]로 구성
 def pcs_r():
